@@ -1,0 +1,234 @@
+/* ================= RESET BÁSICO ================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#000;
+}
+
+/* ================= TERCEIRA (PRÓXIMA CORRIDA) ================= */
+
+.terceira{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-size:cover;
+    background-position:center;
+    padding:120px 20px;
+    transition: background 0.6s ease;
+}
+
+/* Container central */
+.corrida-container{
+    text-align:center;
+    color:white;
+    position:relative;
+}
+
+.terceira h2{
+    font-family:'Audiowide', sans-serif;
+    font-size:64px;
+    margin-bottom:60px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+/* ================= CARD ================= */
+
+.corrida-card{
+    background:rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
+    padding:60px 100px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,0.2);
+    box-shadow:0 20px 40px rgba(0,0,0,0.6);
+    transition:0.4s ease;
+    max-width:700px;
+}
+
+.corrida-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 25px 50px rgba(225,6,0,0.4);
+}
+
+.corrida-card h3{
+    font-family:'Audiowide', sans-serif;
+    font-size:36px;
+    color:#e10600;
+    margin-bottom:20px;
+}
+
+.data{
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:30px;
+}
+
+.local{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    font-size:22px;
+    margin-bottom:40px;
+}
+
+.local i{
+    color:#e10600;
+}
+
+/* ================= LINKS ================= */
+
+.corrida-links{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.link-box{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:14px 28px;
+    border-radius:40px;
+    text-decoration:none;
+    font-family:'Audiowide', sans-serif;
+    font-size:16px;
+    background:rgba(255, 255, 255, 0.195);
+    color:white;
+    transition:all 0.3s ease;
+}
+
+.link-box i{
+    font-size:18px;
+    color:#e10600;
+}
+
+.link-box:hover{
+    background:#e10600;
+    transform:translateY(-4px);
+    box-shadow:0 10px 20px rgba(225,6,0,0.4);
+}
+
+.link-box:hover i{
+    color:white;
+}
+
+/* ================= BOTÃO VOLTAR FIXO ================= */
+
+.btn-voltar-topo{
+    position:fixed;
+    top:25px;
+    left:25px;
+    z-index:2000;
+
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:18px;
+
+    background:rgba(0,0,0,0.6);
+    backdrop-filter:blur(8px);
+    border:1px solid rgba(255,255,255,0.2);
+    color:white;
+
+    transition:all 0.3s ease;
+}
+
+.btn-voltar-topo i{
+    color:white;
+    transition:0.3s ease;
+}
+
+.btn-voltar-topo:hover{
+    background:#e10600;
+    transform:translateY(-4px) scale(1.05);
+    box-shadow:0 8px 20px rgba(225,6,0,0.4);
+}
+
+.btn-voltar-topo:hover i{
+    transform:translateX(-2px);
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #000;
+    border-top: 2px solid #e10600;
+    padding: 18px 40px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-container h3 {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+.footer p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #aaa;
+    font-size: 13px;
+}
+
+.footer-redes {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-redes a {
+    color: white;
+    font-size: 16px;
+    transition: 0.3s ease;
+}
+
+.footer-redes a:hover {
+    color: #e10600;
+    transform: scale(1.15);
+}
+/* ================= SCROLLBAR MINIMALISTA ================= */
+
+/* Chrome, Edge, Opera */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e10600;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c00500;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #e10600 #000;
+}

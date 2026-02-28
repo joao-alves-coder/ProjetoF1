@@ -31,7 +31,7 @@ body{
     background:rgba(255,255,255,0.92);
     height:70px;
     box-shadow:0 4px 20px rgba(255, 0, 0, 0.15);
-    border-radius: 10px;
+    border-radius:10px;
 }
 
 .logo img{
@@ -109,7 +109,6 @@ body{
     height:100vh;
     position:relative;
     overflow:hidden;
-    animation:motorVibrando 0.05s infinite alternate;
 }
 
 .overlay{
@@ -119,92 +118,6 @@ body{
     background:black;
     opacity:0;
     pointer-events:none;
-}
-
-/* ================= BOTÃO HERO ================= */
-.btn-proxima{
-    position:absolute;
-    left:40px;
-    bottom:40px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:8px;
-    text-decoration:none;
-    background:transparent;
-    color:white;
-    font-family:'Audiowide', sans-serif;
-    font-size:20px;
-    letter-spacing:2px;
-    text-transform:uppercase;
-    z-index:10;
-    transition:transform 0.15s ease;
-}
-
-.btn-proxima::before{
-    content:"";
-    position:absolute;
-    top:-20px;
-    left:-40px;
-    width:180%;
-    height:2px;
-    background:linear-gradient(to right, transparent 0%, #e10600 15%, #e10600 85%, transparent 100%);
-    opacity:0.7;
-    transition:all 0.4s ease;
-}
-
-.btn-proxima::after{
-    content:"";
-    position:absolute;
-    top:50%;
-    left:-150%;
-    width:120%;
-    height:2px;
-    background:linear-gradient(to right, transparent, rgba(225,6,0,0.9), transparent);
-    transform:translateY(-50%);
-    opacity:0;
-}
-
-.btn-proxima span{
-    transition:opacity 0.3s ease, transform 0.3s ease;
-}
-
-.btn-proxima i{
-    font-size:34px;
-    color:#e10600;
-    transition:all 0.3s ease;
-}
-
-.btn-proxima:hover span{
-    opacity:0;
-    transform:translateY(-6px);
-}
-
-.btn-proxima:hover i{
-    transform:scale(2);
-    color:white;
-    filter:drop-shadow(0 0 15px #e10600);
-}
-
-.btn-proxima:hover::before{
-    height:4px;
-    opacity:1;
-    box-shadow:0 0 15px #e10600;
-}
-
-.btn-proxima:hover::after{
-    animation:velocidade 0.6s ease forwards;
-    opacity:1;
-}
-
-@keyframes velocidade{
-    0%{ left:-150%; opacity:0; }
-    50%{ opacity:1; }
-    100%{ left:150%; opacity:0; }
-}
-
-.btn-proxima:active{
-    transform:scale(0.92);
 }
 
 /* ================= FAÍSCAS ================= */
@@ -221,7 +134,7 @@ body{
     background:#e10600;
     border-radius:50%;
     opacity:0.8;
-    box-shadow:0 0 10px #e10600,0 0 15px #ff4d4d;
+    box-shadow:0 0 8px #e10600;
     animation:subir 3s linear infinite;
 }
 
@@ -242,16 +155,6 @@ body{
     overflow:hidden;
 }
 
-.light-spot{
-    position:absolute;
-    width:600px;
-    height:600px;
-    background:radial-gradient(circle, rgba(225,6,0,0.25) 0%, transparent 70%);
-    pointer-events:none;
-    transform:translate(-50%, -50%);
-    z-index:1;
-}
-
 .segunda-container{
     position:relative;
     z-index:2;
@@ -265,7 +168,7 @@ body{
     height:90vh;
     max-height:700px;
     object-fit:contain;
-    filter:drop-shadow(0 0 60px rgba(225,6,0,0.6));
+    filter:drop-shadow(0 0 40px rgba(225,6,0,0.4));
     margin-left:-100px;
 }
 
@@ -283,16 +186,6 @@ body{
 
 .segunda-texto h2 span{
     display:block;
-}
-
-.segunda-texto h2 a.audi{
-    color:white;
-    text-decoration:none;
-    transition: color 0.3s ease;
-}
-
-.segunda-texto h2 a.audi:hover{
-    color:#e10600;
 }
 
 .segunda-texto p:first-of-type{
@@ -314,142 +207,389 @@ body{
 .btn-carreira{
     display:block;
     position:relative;
-    padding:14px 30px;
+    padding:18px 42px;
     font-family:'Audiowide', sans-serif;
-    font-size:18px;
+    font-size:22px;
     color:white;
     background:linear-gradient(135deg, #e10600, #ff4d4d);
     border:2px solid #e10600;
-    border-radius:50px;
+    border-radius:60px;
     text-transform:uppercase;
     text-decoration:none;
     letter-spacing:2px;
     overflow:hidden;
     margin:40px auto 0 auto;
-    box-shadow:0 5px 15px rgba(225,6,0,0.5);
+    box-shadow:0 6px 18px rgba(225,6,0,0.4);
     cursor:pointer;
-    transition:0.4s ease;
+    transition:0.3s ease;
+}
+
+.btn-carreira:hover{
+    transform:scale(1.05);
+    box-shadow:0 8px 22px rgba(225,6,0,0.5);
 }
 
 .carro{
     position:absolute;
-    left:0px;
+    left:-50px;
     top:50%;
     transform:translateY(-50%);
-    width:40px;
-    height:25px;
+    width:45px;
+    height:28px;
     background:url('carro-f1.png') no-repeat center/contain;
     pointer-events:none;
-    transition:left 1s ease-in-out;
+    transition:left 0.8s cubic-bezier(.65,.05,.36,1);
+}
+
+.btn-carreira.clicked{
+    animation:impulso 0.3s ease;
 }
 
 .btn-carreira.clicked .carro{
-    left:calc(100% - 50px);
+    left:calc(100% + 10px);
 }
 
-/* ================= TERCEIRA ================= */
-.terceira{
-    min-height:100vh;
+@keyframes impulso{
+    0%{ transform:scale(1); }
+    50%{ transform:scale(1.08); }
+    100%{ transform:scale(1); }
+}
+
+/* ================= BOTÃO PRÓXIMA ================= */
+.btn-proxima{
+    position:absolute;
+    bottom:50px;
+    left:50px;
     display:flex;
-    align-items:center;
-    justify-content:center;
-    background:
-        linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
-        url('melbourne-australia.avif') no-repeat center center;
-    background-size:cover;
-    padding:120px 20px;
-}
-
-.corrida-container{
-    text-align:center;
-    color:white;
-}
-
-.terceira h2{
-    font-family:'Audiowide', sans-serif;
-    font-size:64px;
-    margin-bottom:60px;
-    letter-spacing:3px;
-    text-transform: uppercase;
-}
-
-.corrida-card{
-    background:rgba(255,255,255,0.08);
-    backdrop-filter:blur(15px);
-    padding:60px 100px;
-    border-radius:20px;
-    border:1px solid rgba(255,255,255,0.2);
-    box-shadow:0 20px 40px rgba(0,0,0,0.6);
-    transition:0.4s ease;
-    max-width:700px;
-}
-
-.corrida-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 25px 50px rgba(225,6,0,0.4);
-}
-
-.corrida-card h3{
-    font-family:'Audiowide', sans-serif;
-    font-size:36px;
-    color:#e10600;
-    margin-bottom:20px;
-}
-
-.data{
-    font-size:28px;
-    font-weight:bold;
-    margin-bottom:30px;
-}
-
-.local{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:15px;
-    font-size:22px;
-    margin-bottom:40px;
-}
-
-.local i{
-    color:#e10600;
-}
-
-/* LINKS DO CARD */
-
-.corrida-links{
-    display:flex;
-    justify-content:center;
-    gap:30px;
-    flex-wrap:wrap;
-}
-
-.link-box{
-    display:flex;
+    flex-direction:column;
     align-items:center;
     gap:12px;
-    padding:14px 28px;
-    border-radius:40px;
     text-decoration:none;
     font-family:'Audiowide', sans-serif;
-    font-size:16px;
-    background:rgba(255, 255, 255, 0.195);
-    border:1px solid rgba(255, 255, 255, 0);
+    text-transform:uppercase;
+    letter-spacing:3px;
     color:white;
-    transition:all 0.3s ease;
+    z-index:5;
+    transition:0.4s ease;
+    overflow:hidden;
 }
 
-.link-box i{
-    font-size:18px;
+.btn-proxima::after{
+    content:"";
+    position:absolute;
+    top:50%;
+    right:-120%;
+    width:200%;
+    height:3px;
+    background:linear-gradient(90deg,transparent,rgba(225,6,0,0.5),transparent);
+    transform:translateY(-50%);
+    opacity:0;
+}
+
+.btn-proxima:hover::after{
+    animation:velocidade 0.6s linear forwards;
+    opacity:1;
+}
+
+@keyframes velocidade{
+    from{ right:-120%; }
+    to{ right:120%; }
+}
+
+.btn-proxima .texto{
+    font-size:20px;
+    transition:0.3s ease;
+}
+
+.btn-proxima .bandeira{
+    font-size:42px;
     color:#e10600;
+    transition:0.4s ease;
 }
 
-.link-box:hover{
-    background:#e10600;
-    transform:translateY(-4px);
-    box-shadow:0 10px 20px rgba(225,6,0,0.4);
+.btn-proxima:hover .texto{
+    opacity:0;
+    transform:translateY(6px);
 }
 
-.link-box:hover i{
+.btn-proxima:hover .bandeira{
+    transform:scale(1.5);
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background:#000;
+    border-top:2px solid #e10600;
+    padding:18px 40px;
+}
+
+.footer-container{
+    max-width:1200px;
+    margin:0 auto;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.footer-container h3{
+    font-family:'Audiowide', sans-serif;
+    font-size:16px;
     color:white;
+}
+
+.footer p{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    color:#aaa;
+    font-size:13px;
+}
+
+.footer-redes{
+    display:flex;
+    gap:20px;
+}
+
+.footer-redes a{
+    color:white;
+    font-size:16px;
+    transition:0.3s ease;
+}
+
+.footer-redes a:hover{
+    color:#e10600;
+    transform:scale(1.15);
+}
+/* ================= SCROLL INDICATOR ================= */
+
+.scroll-indicator{
+    position:absolute;
+    bottom:40px;
+    left:50%;
+    transform:translateX(-50%);
+    width:40px;
+    height:60px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:20; /* GARANTE que fica acima de overlay/faíscas */
+    pointer-events:none;
+    opacity:0.8;
+    transition:opacity 0.4s ease;
+}
+
+.scroll-indicator.hide{
+    opacity:0;
+}
+
+.scroll-indicator .arrow{
+    width:12px;
+    height:12px;
+    border-bottom:3px solid #ffffff;
+    border-right:3px solid #ffffff;
+    transform:rotate(45deg);
+    animation:arrowMove 1.8s infinite;
+}
+
+@keyframes arrowMove{
+    0%{
+        transform:rotate(45deg) translateY(0);
+        opacity:0;
+    }
+    30%{
+        opacity:1;
+    }
+    60%{
+        transform:rotate(45deg) translateY(8px);
+    }
+    100%{
+        transform:rotate(45deg) translateY(16px);
+        opacity:0;
+    }
+}                
+/* ================= SCROLLBAR MINIMALISTA ================= */
+
+/* Chrome, Edge, Opera */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e10600;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c00500;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #e10600 #000;
+}
+/* ===================================================== */
+/* =================== RESPONSIVIDADE ================== */
+/* ===================================================== */
+
+/* ----------- TABLET (até 1024px) ----------- */
+@media (max-width: 1024px){
+
+    .navbar{
+        padding: 0 30px;
+    }
+
+    .nome{
+        font-size: 32px;
+    }
+
+    .segunda-container{
+        gap: 40px;
+    }
+
+    .segunda-imagem img{
+        height: 70vh;
+        margin-left: -40px;
+    }
+
+    .segunda-texto h2{
+        font-size: 36px;
+    }
+
+}
+
+
+/* ----------- MOBILE GRANDE (até 768px) ----------- */
+@media (max-width: 768px){
+
+    .navbar{
+        height: 70px;
+        padding: 0 20px;
+    }
+
+    .logo img{
+        height: 60px;
+    }
+
+    .nome{
+        font-size: 22px;
+        gap: 4px;
+    }
+
+    .navbar.scrolled .nome{
+        left: 90px;
+        font-size: 18px;
+    }
+
+    .redes{
+        gap: 16px;
+    }
+
+    .redes i{
+        font-size: 18px;
+    }
+
+    /* HERO */
+    .hero{
+        background-position: center 35%;
+    }
+
+    .btn-proxima{
+        bottom: 30px;
+        left: 20px;
+    }
+
+    .btn-proxima .texto{
+        font-size: 16px;
+    }
+
+    .btn-proxima .bandeira{
+        font-size: 32px;
+    }
+
+    /* SEGUNDA SECTION */
+    .segunda{
+        padding: 80px 30px;
+    }
+
+    .segunda-container{
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .segunda-imagem img{
+        height: 60vh;
+        max-height: 500px;
+        margin-left: 0;
+    }
+
+    .segunda-texto{
+        max-width: 100%;
+    }
+
+    .segunda-texto h2{
+        font-size: 30px;
+    }
+
+    .segunda-texto p:first-of-type{
+        font-size: 22px;
+    }
+
+    .segunda-texto p:last-of-type{
+        font-size: 18px;
+    }
+
+    .btn-carreira{
+        font-size: 18px;
+        padding: 14px 32px;
+    }
+
+    /* FOOTER */
+    .footer-container{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer p{
+        position: static;
+        transform: none;
+    }
+
+}
+
+
+/* ----------- MOBILE PEQUENO (até 480px) ----------- */
+@media (max-width: 480px){
+
+    .nome{
+        display: none; /* limpa visual no ultra pequeno */
+    }
+
+    .redes{
+        gap: 12px;
+    }
+
+    .btn-proxima{
+        left: 15px;
+        bottom: 20px;
+    }
+
+    .btn-proxima .bandeira{
+        font-size: 28px;
+    }
+
+    .segunda-texto h2{
+        font-size: 24px;
+    }
+
+    .segunda-texto p:last-of-type{
+        font-size: 16px;
+    }
+
 }

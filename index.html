@@ -7,14 +7,12 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Audiowide&family=Playball&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <nav class="navbar" id="navbar">
-
     <div class="logo">
         <img src="LogoGB_semfundo.png" alt="Logo Gabriel Bortoleto">
     </div>
@@ -26,29 +24,33 @@
 
     <div class="redes">
         <a href="https://www.instagram.com/gabrielbortoleto_" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://twitter.com/gabrielbortolet" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="https://www.twitch.tv/gabrielbortoleto" target="_blank"><i class="fa-brands fa-twitch"></i></a>
+        <a href="https://x.com/gabortoleto85" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.twitch.tv/ktfesportsoficial" target="_blank"><i class="fa-brands fa-twitch"></i></a>
         <a href="https://www.tiktok.com/@gabrielbortoleto" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
     </div>
-
 </nav>
 
 <section class="hero">
+
     <div class="overlay"></div>
     <div class="faiscas" id="faiscas-container"></div>
 
-    <a href="#corrida" class="btn-proxima">
-        <span>Próxima</span>
-        <i class="fa-solid fa-flag-checkered"></i>
-        <span>Corrida</span>
+    <!-- BOTÃO PRÓXIMA CORRIDA -->
+    <a href="proxima-corrida.html" class="btn-proxima">
+        <span class="texto cima">Próxima</span>
+        <i class="fa-solid fa-flag-checkered bandeira"></i>
+        <span class="texto baixo">Corrida</span>
     </a>
+
+    <!-- INDICADOR DE SCROLL (DISCRETO) -->
+    <div class="scroll-indicator">
+        <div class="arrow"></div>
+    </div>
+
 </section>
 
-<section class="segunda reveal">
-    <div class="light-spot" id="light"></div>
-
+<section class="segunda">
     <div class="segunda-container">
-
         <div class="segunda-imagem">
             <img src="Gabriel_braçoscruzados.png" alt="Gabriel Bortoleto">
         </div>
@@ -56,53 +58,35 @@
         <div class="segunda-texto">
             <h2>
                 <span>Piloto profissional no Mundial FIA F1</span>
-                <span>na equipe <a class="audi" href="https://www.audi.com.br/" target="_blank">Audi</a> Revolut F1 Team</span>
+                <span>na equipe Audi Revolut F1 Team</span>
             </h2>
 
             <p>Velocidade com Inteligência.</p>
-            <p>Aos 21 anos de idade, Gabriel Bortoleto representa a nova geração do Brasil na Fórmula 1.</p>
+            <p>Aos 21 anos, Gabriel representa a nova geração do Brasil na Fórmula 1.</p>
 
             <a href="carreira.html" class="btn-carreira">
                 Carreira<span class="carro"></span>
             </a>
         </div>
-
     </div>
 </section>
 
-<section id="corrida" class="terceira reveal">
+<footer class="footer">
+    <div class="footer-container">
+        <h3>Gabriel Bortoleto</h3>
 
-    <div class="corrida-container">
-        <h2>Próxima Corrida</h2>
-
-        <div class="corrida-card">
-            <h3>Grande Prêmio da Austrália</h3>
-            <p class="data">24 de Março de 2026</p>
-
-            <div class="local">
-                <i class="fa-solid fa-location-dot"></i>
-                <span>Melbourne, Austrália</span>
-            </div>
-
-            <div class="corrida-links">
-
-                <a href="https://f1tv.formula1.com/" target="_blank" class="link-box">
-                    <i class="fa-solid fa-tv"></i>
-                    <span>Streaming</span>
-                </a>
-
-                <a href="https://www.formula1.com/en/racing/2026.html" target="_blank" class="link-box">
-                    <i class="fa-solid fa-clock"></i>
-                    <span>Horários</span>
-                </a>
-
-            </div>
-
+        <div class="footer-redes">
+            <a href="https://www.instagram.com/gabrielbortoleto_" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/gabortoleto85" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.twitch.tv/ktfesportsoficial" target="_blank"><i class="fa-brands fa-twitch"></i></a>
+            <a href="https://www.tiktok.com/@gabrielbortoleto" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
         </div>
-    </div>
 
-</section>
+        <p>© <span id="ano"></span> Todos os direitos reservados</p>
+    </div>
+</footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
