@@ -121,7 +121,7 @@ body{
     color:white;
 }
 
-/* ================= BOTÃO VOLTAR FIXO ================= */
+/* ================= VOLTAR ================= */
 
 .btn-voltar-topo{
     position:fixed;
@@ -207,7 +207,7 @@ body{
     color: #e10600;
     transform: scale(1.15);
 }
-/* ================= SCROLLBAR MINIMALISTA ================= */
+/* ================= SCROLLBAR ================= */
 
 /* Chrome, Edge, Opera */
 ::-webkit-scrollbar {

@@ -10,7 +10,7 @@
 
 .carreira-section{
     min-height:100vh;
-    padding:80px 40px 100px 40px; /* reduzido o espaço superior */
+    padding:80px 40px 100px 40px; 
     background:
         linear-gradient(rgba(0,0,0,0.92), rgba(0,0,0,0.92)),
         url('grid-f1.jpg') no-repeat center center;
@@ -28,7 +28,7 @@
 .carreira-container h2{
     font-family:'Audiowide', sans-serif;
     font-size:60px;
-    margin-bottom:60px; /* reduzido */
+    margin-bottom:60px; 
     letter-spacing:4px;
     text-transform:uppercase;
 }
@@ -119,11 +119,11 @@
     transform:scale(1);
 }
 
-/* ================= BOTÃO VOLTAR TOPO ================= */
+/* ================= VOLTAR TOPO ================= */
 
 .btn-voltar-topo{
     position:absolute;
-    top:20px; /* aproximado do topo */
+    top:20px; 
     left:20px;
     width:42px;
     height:42px;
@@ -196,7 +196,7 @@
     color: #e10600;
     transform: scale(1.15);
 }
-/* ================= SCROLLBAR MINIMALISTA ================= */
+/* ================= SCROLLBAR  ================= */
 
 /* Chrome, Edge, Opera */
 ::-webkit-scrollbar {
