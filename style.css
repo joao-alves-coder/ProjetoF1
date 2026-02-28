@@ -373,7 +373,7 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    z-index:20; /* GARANTE que fica acima de overlay/faíscas */
+    z-index:20; 
     pointer-events:none;
     opacity:0.8;
     transition:opacity 0.4s ease;
@@ -408,7 +408,7 @@ body{
         opacity:0;
     }
 }                
-/* ================= SCROLLBAR MINIMALISTA ================= */
+/* ================= SCROLLBAR ================= */
 
 /* Chrome, Edge, Opera */
 ::-webkit-scrollbar {
@@ -433,9 +433,8 @@ body{
     scrollbar-width: thin;
     scrollbar-color: #e10600 #000;
 }
-/* ===================================================== */
+
 /* =================== RESPONSIVIDADE ================== */
-/* ===================================================== */
 
 /* ----------- TABLET (até 1024px) ----------- */
 @media (max-width: 1024px){
