@@ -203,56 +203,30 @@ body{
     margin-bottom:40px;
 }
 
-/* ================= BOTÃO CARREIRA ================= */
-.btn-carreira{
-    display:block;
-    position:relative;
-    padding:18px 42px;
-    font-family:'Audiowide', sans-serif;
-    font-size:22px;
-    color:white;
-    background:linear-gradient(135deg, #e10600, #ff4d4d);
-    border:2px solid #e10600;
-    border-radius:60px;
-    text-transform:uppercase;
-    text-decoration:none;
-    letter-spacing:2px;
-    overflow:hidden;
-    margin:40px auto 0 auto;
-    box-shadow:0 6px 18px rgba(225,6,0,0.4);
-    cursor:pointer;
-    transition:0.3s ease;
+/* ================= BOTÃO CARREIRA GRANDE ================= */
+.btn-carreira {
+    display: block;
+    width:300px;                   /* mantém tamanho grande */
+    padding: 18px 42px;
+    font-family: 'Audiowide', sans-serif;
+    font-size: 22px;
+    color: white;
+    background: linear-gradient(135deg, #e10600, #ff4d4d);
+    border: 2px solid #e10600;
+    border-radius: 60px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    margin: 40px auto 0 auto;      /* centraliza horizontalmente */
+    box-shadow: 0 6px 18px rgba(225,6,0,0.4);
+    cursor: pointer;
+    transition: 0.3s ease;
+    text-align: center;
 }
 
-.btn-carreira:hover{
-    transform:scale(1.05);
-    box-shadow:0 8px 22px rgba(225,6,0,0.5);
-}
-
-.carro{
-    position:absolute;
-    left:-50px;
-    top:50%;
-    transform:translateY(-50%);
-    width:45px;
-    height:28px;
-    background:url('carro-f1.png') no-repeat center/contain;
-    pointer-events:none;
-    transition:left 0.8s cubic-bezier(.65,.05,.36,1);
-}
-
-.btn-carreira.clicked{
-    animation:impulso 0.3s ease;
-}
-
-.btn-carreira.clicked .carro{
-    left:calc(100% + 10px);
-}
-
-@keyframes impulso{
-    0%{ transform:scale(1); }
-    50%{ transform:scale(1.08); }
-    100%{ transform:scale(1); }
+.btn-carreira:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 22px rgba(225,6,0,0.5);
 }
 
 /* ================= BOTÃO PRÓXIMA ================= */
@@ -361,8 +335,8 @@ body{
     color:#e10600;
     transform:scale(1.15);
 }
-/* ================= SCROLL INDICATOR ================= */
 
+/* ================= SCROLL INDICATOR ================= */
 .scroll-indicator{
     position:absolute;
     bottom:40px;
@@ -408,8 +382,8 @@ body{
         opacity:0;
     }
 }                
-/* ================= SCROLLBAR ================= */
 
+/* ================= SCROLLBAR ================= */
 /* Chrome, Edge, Opera */
 ::-webkit-scrollbar {
     width: 8px;
@@ -435,7 +409,6 @@ body{
 }
 
 /* =================== RESPONSIVIDADE ================== */
-
 /* ----------- TABLET (até 1024px) ----------- */
 @media (max-width: 1024px){
 
@@ -461,7 +434,6 @@ body{
     }
 
 }
-
 
 /* ----------- MOBILE GRANDE (até 768px) ----------- */
 @media (max-width: 768px){
@@ -493,7 +465,6 @@ body{
         font-size: 18px;
     }
 
-    /* HERO */
     .hero{
         background-position: center 35%;
     }
@@ -511,7 +482,6 @@ body{
         font-size: 32px;
     }
 
-    /* SEGUNDA SECTION */
     .segunda{
         padding: 80px 30px;
     }
@@ -545,11 +515,11 @@ body{
     }
 
     .btn-carreira{
+        width: 250px;
         font-size: 18px;
         padding: 14px 32px;
     }
 
-    /* FOOTER */
     .footer-container{
         flex-direction: column;
         gap: 10px;
@@ -562,12 +532,11 @@ body{
 
 }
 
-
 /* ----------- MOBILE PEQUENO (até 480px) ----------- */
 @media (max-width: 480px){
 
     .nome{
-        display: none; /* limpa visual no ultra pequeno */
+        display: none;
     }
 
     .redes{
@@ -589,6 +558,12 @@ body{
 
     .segunda-texto p:last-of-type{
         font-size: 16px;
+    }
+
+    .btn-carreira{
+        width: 220px;
+        font-size: 16px;
+        padding: 12px 28px;
     }
 
 }

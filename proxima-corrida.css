@@ -1,5 +1,4 @@
 /* ================= RESET BÁSICO ================= */
-
 *{
     margin:0;
     padding:0;
@@ -12,7 +11,6 @@ body{
 }
 
 /* ================= TERCEIRA (PRÓXIMA CORRIDA) ================= */
-
 .terceira{
     min-height:100vh;
     display:flex;
@@ -40,7 +38,6 @@ body{
 }
 
 /* ================= CARD ================= */
-
 .corrida-card{
     background:rgba(255,255,255,0.08);
     backdrop-filter:blur(15px);
@@ -84,7 +81,6 @@ body{
 }
 
 /* ================= LINKS ================= */
-
 .corrida-links{
     display:flex;
     justify-content:center;
@@ -122,13 +118,11 @@ body{
 }
 
 /* ================= VOLTAR ================= */
-
 .btn-voltar-topo{
     position:fixed;
     top:25px;
     left:25px;
     z-index:2000;
-
     width:50px;
     height:50px;
     border-radius:50%;
@@ -137,12 +131,10 @@ body{
     justify-content:center;
     text-decoration:none;
     font-size:18px;
-
     background:rgba(0,0,0,0.6);
     backdrop-filter:blur(8px);
     border:1px solid rgba(255,255,255,0.2);
     color:white;
-
     transition:all 0.3s ease;
 }
 
@@ -162,7 +154,6 @@ body{
 }
 
 /* ================= FOOTER ================= */
-
 .footer {
     background: #000;
     border-top: 2px solid #e10600;
@@ -207,8 +198,8 @@ body{
     color: #e10600;
     transform: scale(1.15);
 }
-/* ================= SCROLLBAR ================= */
 
+/* ================= SCROLLBAR ================= */
 /* Chrome, Edge, Opera */
 ::-webkit-scrollbar {
     width: 8px;
@@ -231,4 +222,34 @@ body{
 * {
     scrollbar-width: thin;
     scrollbar-color: #e10600 #000;
+}
+
+/* ================= RESPONSIVO FOOTER ================= */
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 20px; /* aumenta espaço interno do footer */
+    }
+
+    .footer-container {
+        flex-direction: column; /* empilha elementos verticalmente */
+        align-items: center;
+        gap: 15px; /* distância entre os elementos */
+    }
+
+    .footer-container h3 {
+        font-size: 18px; /* aumenta um pouco para melhor visualização */
+        text-align: center;
+    }
+
+    .footer-redes {
+        justify-content: center; /* centraliza os ícones */
+        flex-wrap: wrap; /* permite quebra de linha se necessário */
+    }
+
+    .footer p {
+        position: static; /* tira do centro absoluto para respeitar o fluxo */
+        transform: none;
+        text-align: center;
+        font-size: 14px;
+    }
 }

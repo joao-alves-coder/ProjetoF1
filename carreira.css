@@ -1,5 +1,4 @@
 /* ================= RESET ================= */
-
 *{
     margin:0;
     padding:0;
@@ -7,7 +6,6 @@
 }
 
 /* ================= CARREIRA PAGE ================= */
-
 .carreira-section{
     min-height:100vh;
     padding:80px 40px 100px 40px; 
@@ -40,7 +38,6 @@
 }
 
 /* ================= CARD ================= */
-
 .card-tempo{
     position:relative;
     background:rgba(255,255,255,0.08);
@@ -59,16 +56,10 @@
 }
 
 /* ================= CONTEÚDO ================= */
-
 .card-conteudo{
     position:relative;
     z-index:2;
     transition:opacity 0.4s ease, transform 0.4s ease;
-}
-
-.card-tempo:hover .card-conteudo{
-    opacity:0;
-    transform:scale(0.95);
 }
 
 .card-tempo h3{
@@ -93,7 +84,6 @@
 }
 
 /* ================= IMAGEM ================= */
-
 .card-imagem{
     position:absolute;
     inset:0;
@@ -111,16 +101,38 @@
     transition:transform 0.6s ease;
 }
 
-.card-tempo:hover .card-imagem{
+/* ================= DESKTOP (HOVER REAL) ================= */
+@media (hover: hover) and (pointer: fine) {
+
+    .card-tempo:hover .card-conteudo{
+        opacity:0;
+        transform:scale(0.95);
+    }
+
+    .card-tempo:hover .card-imagem{
+        opacity:1;
+    }
+
+    .card-tempo:hover .card-imagem img{
+        transform:scale(1);
+    }
+}
+
+/* ================= MOBILE (CLIQUE) ================= */
+.card-tempo.ativo .card-conteudo{
+    opacity:0;
+    transform:scale(0.95);
+}
+
+.card-tempo.ativo .card-imagem{
     opacity:1;
 }
 
-.card-tempo:hover .card-imagem img{
+.card-tempo.ativo .card-imagem img{
     transform:scale(1);
 }
 
 /* ================= VOLTAR TOPO ================= */
-
 .btn-voltar-topo{
     position:absolute;
     top:20px; 
@@ -145,8 +157,8 @@
     transform:translateY(-3px);
     box-shadow:0 5px 20px rgba(225,6,0,0.5);
 }
-/* ================= FOOTER ================= */
 
+/* ================= FOOTER ================= */
 .footer {
     background: #000;
     border-top: 2px solid #e10600;
@@ -170,7 +182,7 @@
     margin: 0;
 }
 
-/* CENTRO ABSOLUTO */
+/* CENTRO */
 .footer p {
     position: absolute;
     left: 50%;
@@ -196,8 +208,8 @@
     color: #e10600;
     transform: scale(1.15);
 }
-/* ================= SCROLLBAR  ================= */
 
+/* ================= SCROLLBAR ================= */
 /* Chrome, Edge, Opera */
 ::-webkit-scrollbar {
     width: 8px;
@@ -220,4 +232,34 @@
 * {
     scrollbar-width: thin;
     scrollbar-color: #e10600 #000;
+}
+
+/* ================= RESPONSIVO FOOTER ================= */
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 20px; /* aumenta espaço interno do footer */
+    }
+
+    .footer-container {
+        flex-direction: column; /* empilha elementos verticalmente */
+        align-items: center;
+        gap: 15px; /* distância entre os elementos */
+    }
+
+    .footer-container h3 {
+        font-size: 18px; /* aumenta um pouco para melhor visualização */
+        text-align: center;
+    }
+
+    .footer-redes {
+        justify-content: center; /* centraliza os ícones */
+        flex-wrap: wrap; /* permite quebra de linha se necessário */
+    }
+
+    .footer p {
+        position: static; /* tira do centro absoluto para respeitar o fluxo */
+        transform: none;
+        text-align: center;
+        font-size: 14px;
+    }
 }
