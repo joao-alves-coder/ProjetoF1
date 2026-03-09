@@ -17,8 +17,7 @@ window.addEventListener("scroll", () => {
 });
 
 /* REVEAL */
-const reveals = document.querySelectorAll(".reveal");
-
+const reveals = document.querySelectorAll(".reveal-text");
 function revealOnScroll() {
     reveals.forEach(el => {
         const top = el.getBoundingClientRect().top;

@@ -66,7 +66,7 @@ font-family:'Audiowide', sans-serif;
 color:black;
 }
 
-/* ================= REDES ================= */
+/* ================= REDES SOCIAIS ================= */
 .redes{
 display:flex;
 gap:28px;
@@ -145,7 +145,7 @@ animation:subir 3s linear infinite;
 100%{transform:translateY(-10vh) scale(1);opacity:0;}
 }
 
-/* ================= SEGUNDA ================= */
+/* ================= SEGUNDA SEÇÃO ================= */
 .segunda{
 position:relative;
 min-height:100vh;
@@ -154,8 +154,37 @@ align-items:center;
 justify-content:center;
 padding:120px 80px;
 overflow:hidden;
+} 
+/* ===== ANIMAÇÃO TEXTO SCROLL ===== */
+
+.reveal-text{
+opacity:0;
+transform:translateY(40px);
+transition:all 0.9s ease;
 }
 
+.reveal-text.active{
+opacity:1;
+transform:translateY(0);
+}
+/* LUZ DINÂMICA */
+
+#light{
+position:absolute;
+width:500px;
+height:500px;
+background:radial-gradient(circle,
+rgba(215, 1, 1, 0.25) 0%,
+rgba(215,1,1,0.25) 40%,
+rgba(215, 1, 1, 0.05) 60%,
+transparent 80%);
+border-radius:50%;
+pointer-events:none;
+transform:translate(-50%,-50%);
+filter:blur(40px);
+opacity:0.6;
+z-index:1;
+}
 .segunda-container{
 position:relative;
 z-index:2;
@@ -203,6 +232,40 @@ font-size:20px;
 color:white;
 margin-bottom:40px;
 }
+    /* ===== SPEED UNDERLINE LOCAL ===== */
+
+.audi-link{
+position:relative;
+display:inline-block;
+color:white;
+text-decoration:none;
+cursor:pointer;
+transition:color 0.3s ease;
+}
+
+/* texto vermelho */
+.audi-link:hover{
+color:#e10600;
+}
+
+/* linha embaixo do texto */
+.audi-link::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-6px;
+width:100%;
+height:3px;
+background:linear-gradient(90deg,transparent,#e10600,transparent);
+transform:scaleX(0);
+transform-origin:left;
+transition:transform 0.35s ease;
+}
+
+/* animação */
+.audi-link:hover::after{
+transform:scaleX(1);
+}
 
 /* ================= BOTÃO CARREIRA ================= */
 .btn-carreira{
@@ -230,7 +293,7 @@ transform:scale(1.05);
 box-shadow:0 8px 22px rgba(225,6,0,0.5);
 }
 
-/* ================= BOTÃO PRÓXIMA ================= */
+/* ================= BOTÃO PRÓXIMA CORRIDA ================= */
 .btn-proxima{
 position:absolute;
 bottom:50px;
@@ -337,7 +400,7 @@ color:#e10600;
 transform:scale(1.15);
 }
 
-/* ================= SCROLL INDICATOR ================= */
+/* ================= INDICADOR DE SCROLL ================= */
 .scroll-indicator{
 position:absolute;
 bottom:40px;
