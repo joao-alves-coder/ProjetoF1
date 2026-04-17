@@ -9,9 +9,8 @@ if (ano) {
 const corridas2026 = [
   { nome: "GP da Austrália", local: "Melbourne, Austrália", data: "2026-03-08", imagem: "ImagensCircuito/circuito-melbourne.jpg" },
   { nome: "GP da China", local: "Xangai, China", data: "2026-03-15", imagem: "ImagensCircuito/circuito-xangai.jpg" },
-  { nome: "GP do Japão", local: "Suzuka, Japão", data: "2026-03-29", imagem: "ImagensCircuito/circuito-suzuka.jpg" },
   { nome: "GP do Bahrein", local: "Sakhir, Bahrein", data: "2026-04-12", imagem: "ImagensCircuito/circuito-bahrein.jpg" },
-  { nome: "GP da Arábia Saudita", local: "Jeddah, Arábia Saudita", data: "2026-04-19", imagem: "ImagensCircuito/circuito-jeddah.jpg" },
+  { nome: "GP da Arábia Saudita", local: "Jeddah, Arábia Saudita", data: "2026-04-19", imagem: "ImagensCircuito/Circuito-jeddah.jpg" },
   { nome: "GP de Miami", local: "Miami, Estados Unidos", data: "2026-05-03", imagem: "ImagensCircuito/circuito-miami.jpg" },
   { nome: "GP do Canadá", local: "Montreal, Canadá", data: "2026-05-24", imagem: "ImagensCircuito/circuito-canada.jpg" },
   { nome: "GP de Mônaco", local: "Monte Carlo, Mônaco", data: "2026-06-07", imagem: "ImagensCircuito/circuito-monaco.jpg" },
