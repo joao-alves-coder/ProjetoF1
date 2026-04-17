@@ -155,7 +155,6 @@ justify-content:center;
 padding:120px 80px;
 overflow:hidden;
 } 
-/* ===== ANIMAÇÃO TEXTO SCROLL ===== */
 
 .reveal-text{
 opacity:0;
@@ -167,8 +166,8 @@ transition:all 0.9s ease;
 opacity:1;
 transform:translateY(0);
 }
-/* LUZ DINÂMICA */
 
+/* LUZ DINÂMICA */
 #light{
 position:absolute;
 width:500px;
@@ -185,6 +184,7 @@ filter:blur(40px);
 opacity:0.6;
 z-index:1;
 }
+
 .segunda-container{
 position:relative;
 z-index:2;
@@ -232,23 +232,20 @@ font-size:20px;
 color:white;
 margin-bottom:40px;
 }
-    /* ===== SPEED UNDERLINE LOCAL ===== */
 
+/* LINK */
 .audi-link{
 position:relative;
 display:inline-block;
 color:white;
 text-decoration:none;
-cursor:pointer;
 transition:color 0.3s ease;
 }
 
-/* texto vermelho */
 .audi-link:hover{
 color:#e10600;
 }
 
-/* linha embaixo do texto */
 .audi-link::after{
 content:"";
 position:absolute;
@@ -262,7 +259,6 @@ transform-origin:left;
 transition:transform 0.35s ease;
 }
 
-/* animação */
 .audi-link:hover::after{
 transform:scaleX(1);
 }
@@ -290,10 +286,9 @@ text-align:center;
 
 .btn-carreira:hover{
 transform:scale(1.05);
-box-shadow:0 8px 22px rgba(225,6,0,0.5);
 }
 
-/* ================= BOTÃO PRÓXIMA CORRIDA ================= */
+/* ================= BOTÃO ESQUERDA ================= */
 .btn-proxima{
 position:absolute;
 bottom:50px;
@@ -354,6 +349,78 @@ transform:translateY(6px);
 transform:scale(1.5);
 }
 
+/* ================= BOTÃO DIREITA ================= */
+.btn-ranking{
+position:absolute;
+bottom:50px;
+right:50px;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:12px;
+text-decoration:none;
+font-family:'Audiowide', sans-serif;
+text-transform:uppercase;
+letter-spacing:3px;
+color:white;
+z-index:5;
+transition:0.4s ease;
+overflow:hidden;
+}
+
+.btn-ranking::after{
+content:"";
+position:absolute;
+top:50%;
+left:-120%;
+width:200%;
+height:3px;
+background:linear-gradient(90deg,transparent,rgba(225,6,0,0.5),transparent);
+transform:translateY(-50%);
+opacity:0;
+}
+
+.btn-ranking:hover::after{
+animation:velocidadeRight 0.6s linear forwards;
+opacity:1;
+}
+
+@keyframes velocidadeRight{
+from{left:-120%;}
+to{left:120%;}
+}
+
+.btn-ranking .texto{
+font-size:20px;
+transition:0.3s ease;
+}
+
+.btn-ranking .capacete{
+width:42px;
+height:auto;
+object-fit:contain;
+transition:0.4s ease;
+filter:drop-shadow(0 0 6px rgba(225,6,0,0.6))
+       drop-shadow(0 0 12px rgba(225,6,0,0.3));
+}
+
+.btn-ranking .posicao{
+position:absolute;
+top:-25px;
+font-size:14px;
+color:#e10600;
+font-family:'Space Grotesk', sans-serif;
+}
+
+.btn-ranking:hover .texto{
+opacity:0;
+transform:translateY(6px);
+}
+
+.btn-ranking:hover .capacete{
+transform:scale(1.5);
+}
+
 /* ================= FOOTER ================= */
 .footer{
 background:#000;
@@ -384,265 +451,24 @@ color:#aaa;
 font-size:13px;
 }
 
-.footer-redes{
-display:flex;
-gap:20px;
-}
-
-.footer-redes a{
-color:white;
-font-size:16px;
-transition:0.3s ease;
-}
-
-.footer-redes a:hover{
-color:#e10600;
-transform:scale(1.15);
-}
-
-/* ================= INDICADOR DE SCROLL ================= */
-.scroll-indicator{
-position:absolute;
-bottom:40px;
-left:50%;
-transform:translateX(-50%);
-width:40px;
-height:60px;
-display:flex;
-justify-content:center;
-align-items:center;
-z-index:20;
-pointer-events:none;
-opacity:0.8;
-transition:opacity 0.4s ease;
-}
-
-.scroll-indicator.hide{
-opacity:0;
-}
-
-.scroll-indicator .arrow{
-width:12px;
-height:12px;
-border-bottom:3px solid #ffffff;
-border-right:3px solid #ffffff;
-transform:rotate(45deg);
-animation:arrowMove 1.8s infinite;
-}
-
-@keyframes arrowMove{
-0%{transform:rotate(45deg) translateY(0);opacity:0;}
-30%{opacity:1;}
-60%{transform:rotate(45deg) translateY(8px);}
-100%{transform:rotate(45deg) translateY(16px);opacity:0;}
-}
-
-/* ================= SCROLLBAR ================= */
-::-webkit-scrollbar{
-width:8px;
-}
-
-::-webkit-scrollbar-track{
-background:#000;
-}
-
-::-webkit-scrollbar-thumb{
-background:#e10600;
-border-radius:10px;
-}
-
-::-webkit-scrollbar-thumb:hover{
-background:#c00500;
-}
-
-*{
-scrollbar-width:thin;
-scrollbar-color:#e10600 #000;
-}
-
-/* ================= RESPONSIVIDADE ================= */
-
-/* -------- TABLET -------- */
-@media (max-width:1024px){
-
-.navbar{
-padding:0 30px;
-}
-
-.nome{
-font-size:32px;
-}
-
-.segunda-container{
-gap:40px;
-}
-
-.segunda-imagem img{
-height:70vh;
-margin-left:-40px;
-}
-
-.segunda-texto h2{
-font-size:36px;
-}
-
-}
-
-/* -------- MOBILE -------- */
+/* ================= RESPONSIVO ================= */
 @media (max-width:768px){
-
-.navbar{
-height:70px;
-padding:0 16px;
-}
-
-.logo img{
-height:55px;
-}
-
-.nome{
-left:50%;
-transform:translateX(-50%);
-font-size:20px;
-gap:4px;
-}
-
-.navbar.scrolled .nome{
-left:70px;
-transform:none;
-font-size:17px;
-}
-
-.redes{
-gap:14px;
-}
-
-.redes i{
-font-size:18px;
-}
-
-.hero{
-background-position:center 35%;
-}
 
 .btn-proxima{
 bottom:25px;
 left:20px;
 }
 
-.btn-proxima .texto{
+.btn-ranking{
+bottom:25px;
+right:20px;
+}
+
+.btn-ranking .texto{
 font-size:15px;
 }
 
-.btn-proxima .bandeira{
-font-size:30px;
+.btn-ranking .capacete{
+width:30px;
 }
-
-.segunda{
-padding:90px 24px;
-}
-
-.segunda-container{
-flex-direction:column;
-text-align:center;
-gap:30px;
-max-width:500px;
-margin:auto;
-}
-
-.segunda-imagem img{
-width:100%;
-height:auto;
-max-height:420px;
-margin:0;
-}
-
-.segunda-texto{
-max-width:100%;
-}
-
-.segunda-texto h2{
-font-size:28px;
-}
-
-.segunda-texto p:first-of-type{
-font-size:22px;
-margin-top:20px;
-}
-
-.segunda-texto p:last-of-type{
-font-size:17px;
-}
-
-.btn-carreira{
-width:240px;
-font-size:18px;
-padding:14px 28px;
-margin:30px auto 0 auto;
-}
-
-.footer{
-padding:30px 20px;
-}
-
-.footer-container{
-flex-direction:column;
-gap:14px;
-text-align:center;
-}
-
-.footer-container h3{
-font-size:18px;
-}
-
-.footer p{
-position:static;
-transform:none;
-font-size:14px;
-}
-
-.footer-redes{
-gap:22px;
-}
-
-.footer-redes a{
-font-size:18px;
-}
-
-}
-
-/* -------- MOBILE PEQUENO -------- */
-@media (max-width:480px){
-
-.nome{
-display:none;
-}
-
-.redes{
-gap:12px;
-}
-
-.btn-proxima{
-left:15px;
-bottom:20px;
-}
-
-.btn-proxima .bandeira{
-font-size:28px;
-}
-
-.segunda-texto h2{
-font-size:24px;
-}
-
-.segunda-texto p:last-of-type{
-font-size:16px;
-}
-
-.btn-carreira{
-width:220px;
-font-size:16px;
-padding:12px 28px;
-}
-
 }
