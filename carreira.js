@@ -1,5 +1,16 @@
-// CARDS INTERATIVOS - CARREIRA
+// ================= NAVBAR SCROLL =================
+const navbar = document.getElementById("navbar");
 
+window.addEventListener("scroll", () => {
+    if (window.scrollY > 80) {
+        navbar?.classList.add("scrolled");
+    } else {
+        navbar?.classList.remove("scrolled");
+    }
+});
+
+
+// ================= CARDS INTERATIVOS - CARREIRA =================
 document.addEventListener("DOMContentLoaded", function () {
 
     const cards = document.querySelectorAll(".card-tempo");
@@ -8,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         card.addEventListener("click", function () {
 
-            // (desktop), não ativa clique
+            // Se for desktop (tem hover real), não ativa clique
             if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
                 return;
             }

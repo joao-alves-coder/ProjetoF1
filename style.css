@@ -395,13 +395,12 @@ font-size:20px;
 transition:0.3s ease;
 }
 
+/* 🔴 COR DO SVG CONTROLADA AQUI */
 .btn-ranking .capacete{
 width:42px;
 height:auto;
-object-fit:contain;
+color:#e10600;
 transition:0.4s ease;
-filter:drop-shadow(0 0 6px rgba(225,6,0,0.6))
-       drop-shadow(0 0 12px rgba(225,6,0,0.3));
 }
 
 .btn-ranking .posicao{

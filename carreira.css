@@ -263,3 +263,77 @@
         font-size: 14px;
     }
 }
+/* ================= NAVBAR ================= */
+.navbar{
+position:fixed;
+top:0;
+width:100%;
+height:90px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 60px;
+background:rgba(255,255,255,0.538);
+backdrop-filter:blur(10px);
+transition:all 0.4s ease;
+z-index:1000;
+}
+
+.navbar.scrolled{
+background:rgba(255,255,255,0.92);
+height:70px;
+box-shadow:0 4px 20px rgba(255,0,0,0.15);
+border-radius:10px;
+}
+
+.logo img{
+height:90px;
+transition:0.4s;
+}
+
+.nome{
+position:absolute;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:8px;
+font-size:42px;
+transition:all 0.5s ease;
+white-space:nowrap;
+}
+
+.navbar.scrolled .nome{
+left:140px;
+transform:none;
+font-size:28px;
+}
+
+.nome span:first-child{
+font-family:'Playball', cursive;
+color:#e10600;
+}
+
+.nome span:last-child{
+font-family:'Audiowide', sans-serif;
+color:black;
+}
+
+.redes{
+display:flex;
+gap:28px;
+}
+
+.redes i{
+font-size:22px;
+color:black;
+transition:0.3s ease;
+}
+
+.redes i:hover{
+color:#e10600;
+transform:scale(1.2);
+}
+
+.carreira-section{
+padding-top:140px;
+}
