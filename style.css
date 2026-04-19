@@ -395,7 +395,6 @@ font-size:20px;
 transition:0.3s ease;
 }
 
-/* 🔴 COR DO SVG CONTROLADA AQUI */
 .btn-ranking .capacete{
 width:42px;
 height:auto;
@@ -448,6 +447,27 @@ left:50%;
 transform:translateX(-50%);
 color:#aaa;
 font-size:13px;
+}
+
+/* 🔥 CORREÇÃO DOS ÍCONES DO FOOTER */
+.footer-redes{
+display:flex;
+gap:20px;
+}
+
+.footer-redes a{
+text-decoration:none;
+}
+
+.footer-redes i{
+color:white;
+font-size:20px;
+transition:0.3s ease;
+}
+
+.footer-redes i:hover{
+color:#e10600;
+transform:scale(1.2);
 }
 
 /* ================= RESPONSIVO ================= */

@@ -1,6 +1,16 @@
 .ranking{
 min-height:100vh;
-background:#000;
+
+/* 🔥 FUNDO COM IMAGEM */
+background: 
+linear-gradient(rgba(0, 0, 0, 0.811), rgba(0,0,0,0.85)),
+url("ImagensProjetoF1/PilotosF1-2026.jpg");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+background-attachment:fixed;
+
 padding:140px 20px 60px;
 text-align:center;
 color:white;
@@ -55,11 +65,12 @@ gap:10px;
 .linha{
 display:flex;
 justify-content:space-between;
-background:#111;
+background:rgba(17,17,17,0.85);
 padding:15px 20px;
 border-radius:10px;
 font-size:18px;
 transition:0.3s;
+backdrop-filter:blur(4px);
 }
 
 .linha.header{
@@ -70,7 +81,7 @@ font-weight:bold;
 
 .linha:hover{
 transform:scale(1.03);
-background:#1a1a1a;
+background:rgba(26,26,26,0.95);
 }
 
 .linha.destaque{
@@ -78,10 +89,10 @@ border:2px solid #e10600;
 box-shadow:0 0 10px rgba(225,6,0,0.4);
 }
 
-/* BOTÃO VOLTAR (CORRIGIDO) */
+/* BOTÃO VOLTAR */
 .btn-voltar-topo{
 position:fixed;
-top:140px; /* 🔥 AJUSTE AQUI — abaixo da navbar */
+top:140px;
 left:30px;
 width:50px;
 height:50px;
@@ -96,6 +107,7 @@ font-size:20px;
 z-index:1000;
 transition:0.3s ease;
 backdrop-filter:blur(6px);
+text-decoration:none;
 }
 
 .btn-voltar-topo:hover{
@@ -119,7 +131,6 @@ font-size:15px;
 padding:12px;
 }
 
-/* botão acompanha no mobile */
 .btn-voltar-topo{
 top:120px;
 left:15px;
@@ -127,7 +138,4 @@ width:42px;
 height:42px;
 font-size:16px;
 }
-}
-.btn-voltar-topo{
-text-decoration: none;
 }
