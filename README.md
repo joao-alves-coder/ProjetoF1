@@ -10,20 +10,25 @@
 
 ## 📌 Sobre o projeto
 
-Este projeto foi desenvolvido para praticar desenvolvimento **Front-End**, criando um site moderno e responsivo sobre o piloto brasileiro **Gabriel Bortoleto**, que compete na Fórmula 1.
+Este projeto foi desenvolvido para praticar desenvolvimento **Front-End**, criando um site moderno e responsivo sobre o piloto brasileiro **Gabriel Bortoleto**, que compete na Fórmula 1. 
+Usei uma função em JavaScript para fazer a troca automática de imagens nome e locais na página próxima corrida, pois ainda vou aprender a usar banco de dados. 
 
 O site inclui:
 
 - Página inicial com design imersivo
 - Informações sobre a carreira do piloto
 - Página com a próxima corrida
-- Layout responsivo para desktop e mobile
+- Layout responsivo 
 - Animações em JavaScript
 
+  Estou aberto a ajuda ou sugestõs para melhorar o site...
+
 ---
+Acesse aqui!!
+https://joao-alves-coder.github.io/ProjetoF1/index.html
 
 ## 👨‍💻 Autor
 
 João Alves  
 Técnico em Informática pelo Instituto Federal Goiano  
-Futuro desenvolvedor Full Stack
+Desenvolvedor Front-End
