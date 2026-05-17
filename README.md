@@ -25,7 +25,6 @@ O site inclui:
 
 ---
 Acesse aqui!!
-https://joao-alves-coder.github.io/ProjetoF1/index.html
 
 ## 👨‍💻 Autor
 
